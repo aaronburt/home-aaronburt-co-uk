@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{ margin: 0px; padding: 0px; }
+body { font-family: 'Roboto', sans-serif; background: #373da8; color: rgb(255, 255, 255); }
+
+/* div class */
+.center-text { text-align: center; }
+.item { height: 128px; }
+.item:hover { -webkit-animation: lifting 0.2s ease-in-out forwards; animation: lifting 0.2s ease-in-out forwards; }
+
+/* keyframes */
+@-webkit-keyframes lifting { 100% { -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
+@keyframes lifting { 100% { -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
+
+/* div id */
+#primary { line-height: 100vh; text-align: center; }
+#secondary { display: inline-block; vertical-align: middle; line-height: normal; }
+#search-box:focus, #search-box:focus{ outline: none; }
+#clock-date { font-size: 5vh; }
+#clock-time { font-size: 4vh; }
+
+
+/* Side nav */ 
+
+#side-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left:15px;
+    top:0;
+    height: 100%;
+    width: 200px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.side-nav-box {
+    position: relative;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius:24px;
+    border: 0px; 
+
 }
+
+#search-box { 
+    position: relative;
+    line-height: 39px; 
+    top: 15px; 
+    width: 100%; 
+    height: 39px; 
+    text-align: center; 
+}
+
+#weather_tag {
+    position: relative;
+    text-align: center;
+    top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#side-news {
+    position: relative;
+    line-height: 39px; 
+    top: 15px; 
+    width: 100%; 
+    height: 39px; 
+    text-align: center; 
+}
+
+
+::-webkit-input-placeholder { text-align: center; }
+::-moz-placeholder { text-align: center; }
+::-moz-placeholder { text-align: center; }
+::-ms-input-placeholder { text-align: center; }
